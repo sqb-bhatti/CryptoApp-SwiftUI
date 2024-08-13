@@ -1,30 +1,25 @@
-//
-//  ContentView.swift
-//  CryptoApp
-//
-//  Created by Saqib Bhatti on 13/8/24.
-//
+
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
         ZStack {
-            Color.theme.background
+            Color.theme.Background
                 .ignoresSafeArea()
             
             VStack(spacing: 40) {
                 Text("Accent Color")
-                    .foregroundColor(Color.theme.accent)
+                    .foregroundColor(Color.theme.Accent)
                 
                 Text("Secondary Text Color")
-                    .foregroundColor(Color.theme.secondaryText)
+                    .foregroundColor(Color.theme.SecondaryText)
                 
                 Text("Red Color")
-                    .foregroundColor(Color.theme.red)
+                    .foregroundColor(Color.theme.Red)
                 
                 Text("Green Color")
-                    .foregroundColor(Color.theme.green)
+                    .foregroundColor(Color.theme.Green)
             }
             .font(.headline)
         }

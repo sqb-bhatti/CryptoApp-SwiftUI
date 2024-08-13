@@ -1,18 +1,34 @@
-//
-//  CircleButtonView.swift
-//  CryptoApp
-//
-//  Created by Saqib Bhatti on 13/8/24.
-//
+
 
 import SwiftUI
 
 struct CircleButtonView: View {
+    let iconName: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Image(systemName: iconName)
+            .font(.headline)
+            .foregroundColor(Color.theme.Accent)
+            .frame(width: 50, height: 50)
+            .background(
+                Circle()
+                    .foregroundColor(Color.theme.Background)
+            )
+            .shadow(color: Color.theme.Accent.opacity(0.25), radius: 10,
+                        x: 0, y: 0)
+            .padding()
     }
 }
 
 #Preview {
-    CircleButtonView()
+    Group {
+        CircleButtonView(iconName: "info")
+            .previewLayout(.sizeThatFits)
+        
+        CircleButtonView(iconName: "plus")
+            .previewLayout(.sizeThatFits)
+            .colorScheme(.dark)
+    }
+        .padding()
+        .previewLayout(.sizeThatFits)
 }
